@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import static javax.swing.JOptionPane.showMessageDialog;
-//import javax.swing.plaf.basic.*;
 import java.awt.event.*;
 import java.util.*;
 
@@ -19,6 +18,10 @@ public class Hydra extends JFrame
         if(age<10)
         {
             setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        }
+        else
+        {
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
         }
         JMenuBar menuBar = new JMenuBar();
             JMenu attack = new JMenu("Attack");
@@ -55,10 +58,9 @@ public class Hydra extends JFrame
 
     public void beheadf()
     {
-        //setVisible(false);
         dispose();
         age = age + 1;
-        showMessageDialog(null, "Age: " + age);
+        //showMessageDialog(null, "Age: " + age);
         Hydra h1 = new Hydra();
         Hydra h2 = new Hydra();
     }
